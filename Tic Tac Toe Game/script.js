@@ -66,7 +66,7 @@ const checkWinner = () => {
         let pos3Val = boxes[pattern[2]].innerText;
 
         if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
-            if(pos1Val === pos2Val && pos2Val === pos3Val){
+            if(pos1Val === pos2Val && pos1Val === pos3Val){
                 console.log("Winner", pos1Val);
             }
             showWinner(pos1Val);
