@@ -1,9 +1,9 @@
 let userScore = 0;
 let compScore =0;
-const choise = document.querySelector(".choice");
+const choices = document.querySelector(".choices");
 const msg = document.querySelector("#msg");
 const userScorePara = document.querySelector("#user-score");
-const compScorePara = documnet.querySelector("#comp-score");
+const compScorePara = document.querySelector("#comp-score");
 
 const genCompChoice=()=>{
     const option = ["rock","paper","scissor"];
@@ -50,8 +50,8 @@ const playGame=(userChoice)=>{
 };
 
 choices.forEach((choice) => {
-    choice.addEventListener("click", () => {
-      const userChoice = choice.getAttribute("id");
-      playGame(userChoice);
-    });
+  choice.addEventListener("click", () => {
+    const userChoice = choice.getAttribute("id");
+    playGame(userChoice);
   });
+});
